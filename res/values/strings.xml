@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Mind Control</string>
+    <string name="bands_power"><b><u>Absolute band powers, in Bels</u></b></string>
+    <string name="rel_bands_power"><b><u>Relative band powers</u></b></string>
+    
+    
+    <string name="delta"><b>Delta (1-4Hz) Values:</b></string>
+	<string name="theta"><b>Theta (5-8Hz) Values:</b></string>
+	<string name="alpha"><b>Alpha (9-13Hz) Values:</b></string>
+	<string name="beta"><b>Beta (13-30Hz) Values:</b></string>
+	<string name="gamma"><b>Gamma (30-50Hz) Values:</b></string>
+	
+	
+	<string name="rel_delta"><b>Relative Delta:</b></string>
+	<string name="rel_theta"><b>Relative Theta:</b></string>
+	<string name="rel_alpha"><b>Relative Alpha:</b></string>
+	<string name="rel_beta"><b>Relative Beta:</b></string>
+	<string name="rel_gamma"><b>Relative Gamma:</b></string>
+	
+	<string name="raw_eeg"><b>Raw EEG Values:</b></string>
+	
+	<string name="ip_address"><b><u>IP Address:</u></b></string>
+	<string name="refresh_ip"><b>Refresh IP</b></string>
+	<string name="port"><b><u>Port:</u></b></string>
+	<string name="udp_tcp"><b><u>UDP/TCP:</u></b></string>
+	
+	<string name="raw_eeg_graph"><b><u>Raw EEG Values Plot</u></b></string>
+	
+	<string name="rel_beta_threshold"><b>Beta Threshold:</b></string>
+	<string name="plus"><b>+</b></string>
+	<string name="minus"><b>-</b></string>
+	<string name="reset_box"><b>Reset Box Position</b></string>
+	
+	<string name="init_val">0.0</string>
+	
+	<!-- Main Menu -->
+	<string name="muse_status">Connection Status:\nUnknown</string>
+	<string name="muse_prompt"><b>Please select a Muse device</b></string>
+	<string name="muse_refresh"><b>Refresh</b></string>
+	<string name="muse_connect"><b>Connect</b></string>
+	<string name="muse_disconnect"><b>Disconnect</b></string>
+	<string name="relax_data"><b>Collect Relaxation Data</b></string>
+	<string name="focus_data"><b>Collect Concentration Data</b></string>
+	<string name="mind_control"><b>\"Mind Control\"</b></string>
+	<string name="save_log"><b>Save Log</b></string>
+	<string name="connection_quality"><b>Connection Quality:</b></string>
+	<string name="x">X</string>
+	<string name="k_value"><b>Current \'k\' value:</b></string>
+	<string name="k_value_prompt"><b>Choose \'k\' value for k-nn algorithm</b></string>
+	<string-array name="k_value_array">
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>11</item>
+        <item>13</item>
+        <item>15</item>
+    </string-array>
+    <string name="cross_validation"><b>10-fold Cross Validation</b></string>
+	
+	<!-- Relax Menu -->
+	<string name="relax_inst">Please close your eyes and relax for 30 seconds.
+	    A beeping sound will be played when the time is up.\n\n
+	    Please \'Start!\' to begin!</string>
+	<string name="relax_start"><b>Start!</b></string>
+	<string name="relax_main_menu"><b>Main Menu</b></string>
+	
+	<!-- Focus Menu -->
+	<string name="focus_inst">Please try to find Wally.\n
+	    You have 30 seconds, press \'Start!\' to begin!</string>
+	<string name="focus_wally_contentDesc">Wally Image</string>
+	<string name="focus_start"><b>Start!</b></string>
+	<string name="focus_main_menu"><b>Main Menu</b></string>
+	<string name="focus_wallyGameImgDesc">Wally Game Image</string>
+	<string name="empty"></string>
+	
+	<!-- Mind Control Menu -->
+	<string name="mindControl_start"><b>Start!</b></string>
+	<string name="mindControl_opt1"><b>Option 1: Focus or Relax?</b></string>
+	<string name="mindControl_opt2"><b>Option 2: The Musical</b></string>
+	<string name="mindControl_opt3"><b>Option 3: Work In Progress</b></string>
+	<string name="mindControl_main_menu"><b>Main Menu</b></string>
+	<string name="mindControl_menu"><b>Mind Control Menu</b></string>
+	
+	<!-- Mind Control Option 1 -->
+	<string name="mindCtrlOpt1_focus"><b>Focus</b></string>
+	<string name="mindCtrlOpt1_relax"><b>Relax</b></string>
+	
+	<!-- Mind Control Option 2 -->
+	<string name="mindCtrlOpt2_inst"><b>Focus to increase the volume.\n
+	    Relax to decrease the volume.</b></string>
+	
+	<!-- Mind Control Option 3 -->
+	<!-- Nothing at this point in time -->
+	
+</resources>

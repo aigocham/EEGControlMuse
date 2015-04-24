@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UselessParent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:saveEnabled="true" >
+
+            <!-- NETWORK OPTIONS START -->
+            
+            <TextView
+                android:id="@+id/tv_ip_address_title"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/ip_address"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/tv_ip_address"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_ip_address_title"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/init_val"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/btn_ip_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_ip_address"
+                android:layout_toEndOf="@id/tv_ip_address"
+                android:layout_marginStart="5dp"
+                android:onClick="RefreshIP"
+                android:text="@string/refresh_ip" />
+            <TextView
+                android:id="@+id/tv_port_number"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:text="@string/init_val"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/tv_port_number_title"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_toStartOf="@id/tv_port_number"
+                android:layout_marginEnd="5dp"
+                android:text="@string/port"
+                android:textSize="24sp"
+                android:gravity="end" />
+            <TextView
+                android:id="@+id/tv_udp_tcp"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_port_number"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/tv_udp_tcp_title"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_toStartOf="@id/tv_udp_tcp"
+                android:layout_alignBottom="@id/tv_udp_tcp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/udp_tcp"
+                android:textSize="24sp"
+                android:gravity="end" />
+            
+            <!-- NETWORK OPTIONS END -->
+
+			<!-- RAW MUSE VALUES START -->
+			
+            <TextView
+                android:id="@+id/tv_bands_power"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_ip_address"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/bands_power"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_delta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_bands_power"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/delta"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/delta_vals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_delta"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/delta_ch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/delta_ch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/delta_ch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/delta_ch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_theta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/delta_vals_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/theta"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/theta_vals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_theta"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/theta_ch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/theta_ch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/theta_ch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/theta_ch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_alpha"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/theta_vals_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/alpha"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/alpha_vals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_alpha"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/alpha_ch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/alpha_ch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/alpha_ch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/alpha_ch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_beta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/alpha_vals_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/beta"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/beta_vals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_beta"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/beta_ch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/beta_ch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/beta_ch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/beta_ch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_raw_eeg"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/beta_vals_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/raw_eeg"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:id="@+id/raw_eeg_vals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_raw_eeg"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/raw_eeg_ch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/raw_eeg_ch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/raw_eeg_ch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/raw_eeg_ch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/init_val"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            
+            <!-- RAW MUSE VALUES END -->
+            
+            <!-- GRAPHING START -->
+            
+            <TextView
+                android:id="@+id/tv_raw_eeg_graph_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/raw_eeg_vals_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/raw_eeg_graph"
+                android:textSize="28sp" />
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph_raw_eeg"
+                android:layout_width="match_parent"
+                android:layout_height="400dip"
+                android:layout_below="@+id/tv_raw_eeg_graph_title"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="40dp" />
+            
+            <!-- GRAPHING END -->
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

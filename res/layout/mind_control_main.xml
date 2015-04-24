@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UselessParent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:saveEnabled="true"
+            android:visibility="visible" >
+
+            <!-- Start of relative layout for main menu -->
+
+          <RelativeLayout
+                android:id="@+id/rl_main_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tv_main_muse_selector"
+                    android:layout_width="400dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/muse_status"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <Spinner
+                    android:id="@+id/sp_main_muse_spinner"
+                    android:layout_width="400dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/tv_main_muse_selector"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:prompt="@string/muse_prompt"
+                    android:spinnerMode="dialog" />
+
+                <Button
+                    android:id="@+id/btn_main_muse_connect"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/sp_main_muse_spinner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/muse_connect"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_main_muse_refresh"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@id/btn_main_muse_connect"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toStartOf="@id/btn_main_muse_connect"
+                    android:gravity="center"
+                    android:text="@string/muse_refresh"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_main_muse_disconnect"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@id/btn_main_muse_connect"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/btn_main_muse_connect"
+                    android:gravity="center"
+                    android:text="@string/muse_disconnect"
+                    android:textSize="16sp" />
+                
+                <TextView
+                    android:id="@+id/tv_main_connection_quality"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/btn_main_muse_connect"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/connection_quality"
+                    android:textSize="22sp" />
+                
+                <TextView
+                    android:id="@+id/tv_main_horseshoe_marker"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_main_connection_quality"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.8"
+                    android:background="@android:color/holo_red_light"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textSize="20sp" />
+                
+                <TextView
+                    android:id="@+id/tv_main_horseshoe_fp1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignBaseline="@id/tv_main_horseshoe_marker"
+                    android:layout_toStartOf="@id/tv_main_horseshoe_marker"
+                    android:background="@android:color/holo_green_light"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_main_horseshoe_fp2"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignBaseline="@id/tv_main_horseshoe_marker"
+                    android:layout_toEndOf="@id/tv_main_horseshoe_marker"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_main_horseshoe_tp9"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignBaseline="@id/tv_main_horseshoe_marker"
+                    android:layout_toStartOf="@id/tv_main_horseshoe_fp1"
+                    android:background="@android:color/holo_red_light"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textSize="20sp" />      
+
+                <TextView
+                    android:id="@+id/tv_main_horseshoe_tp10"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignBaseline="@id/tv_main_horseshoe_marker"
+                    android:layout_toEndOf="@id/tv_main_horseshoe_fp2"
+                    android:background="@android:color/holo_orange_light"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_main_relax_data"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/tv_main_horseshoe_marker"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="@string/relax_data"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_main_focus_data"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/btn_main_relax_data"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/focus_data"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_main_mind_control"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/btn_main_focus_data"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/mind_control"
+                    android:textSize="24sp" />
+                
+                <TextView
+                    android:id="@+id/tv_main_current_k_value"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/btn_main_mind_control"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:text="@string/k_value"
+                    android:textSize="24sp" />
+                
+                <Spinner
+			        android:id="@+id/sp_main_k_value"
+			        android:layout_width="400dp"
+			        android:layout_height="70dp"
+			        android:layout_below="@id/tv_main_current_k_value"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+			        android:entries="@array/k_value_array"
+			        android:prompt="@string/k_value_prompt"
+			        android:spinnerMode="dialog"
+			        android:textSize="22sp" />
+                
+                <Button
+                    android:id="@+id/btn_main_cross_validation"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/sp_main_k_value"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/cross_validation"
+                    android:textSize="24sp" />
+                
+            </RelativeLayout>
+            <!-- End of relative layout for main menu -->
+            
+            <!-- Start of relative layout for cross-validation menu -->
+            <RelativeLayout
+                android:id="@+id/rl_cross_validation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/tv_cv_k_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textSize="32sp" />
+                
+                <TextView
+                    android:id="@+id/tv_cv_results"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_cv_k_value"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textSize="26sp" />
+
+                <Button
+                    android:id="@+id/btn_cv_end"
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/relax_main_menu"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+            <!-- End of relative layout for cross_validation menu -->
+
+
+            <!-- Start of relative layout for relax menu -->
+            <RelativeLayout
+                android:id="@+id/rl_relax_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/tv_relax_inst"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/relax_inst"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btn_relax_start"
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/relax_start"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_relax_timer"
+                    android:layout_width="500dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/init_val"
+                    android:textSize="60sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_relax_end"
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/relax_main_menu"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+            <!-- End of relative layout for relax menu -->
+
+            <!-- Start of relative layout for focus menu -->
+            <RelativeLayout
+                android:id="@+id/rl_focus_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/tv_focus_inst"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:text="@string/focus_inst"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:id="@+id/iv_focus_wally"
+                    android:layout_width="300dp"
+                    android:layout_height="450dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/focus_wally_contentDesc"
+                    android:drawingCacheQuality="high"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/waldo_w_labels" />
+
+                <Button
+                    android:id="@+id/btn_focus_start"
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/focus_start"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_focus_timer"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/init_val"
+                    android:textSize="32sp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_focus_wallyGameImage"
+                    android:layout_width="800dp"
+                    android:layout_height="600dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/focus_wallyGameImgDesc"
+                    android:drawingCacheQuality="high"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cropped_waldo_002"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_focus_wallyGameSoln"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_alignStart="@id/iv_focus_wallyGameImage"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="590dp"
+                    android:alpha="0"
+                    android:background="@drawable/block"
+                    android:text="@string/empty"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_focus_end"
+                    android:layout_width="400dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/focus_main_menu"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+            <!-- End of relative layout for focus menu -->
+            
+            <!-- Start of relative layout for mind control menu -->
+            <RelativeLayout
+                android:id="@+id/rl_mindControl_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="invisible" >
+                
+                <RadioGroup
+                    android:id="@+id/rg_mindControl_options"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center" >
+
+                    <RadioButton
+                        android:id="@+id/rb_mindControl_opt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:checked="true"
+                        android:text="@string/mindControl_opt1"
+                        android:textSize="40sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mindControl_opt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/mindControl_opt2"
+                        android:textSize="40sp" />
+                    
+                    <RadioButton
+                        android:id="@+id/rb_mindControl_opt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/mindControl_opt3"
+                        android:textSize="40sp" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btn_mindControl_start"
+                    android:layout_width="400dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/mindControl_start"
+                    android:textSize="20sp" />
+                
+                <Button
+                    android:id="@+id/btn_mindControl_end"
+                    android:layout_width="400dp"
+                    android:layout_height="80dp"
+                    android:layout_above="@id/btn_mindControl_start"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="@string/mindControl_main_menu"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <!-- End of relative layout for mind control menu -->
+            
+            <!-- Start of relative layout for mind control option 1 -->
+            <RelativeLayout
+                android:id="@+id/rl_mindControlOpt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="invisible" >
+                
+                <ProgressBar
+                    android:id="@+id/pb_mindControlOpt1_relaxStatus"
+			        android:layout_width="300dp"
+			        android:layout_height="50dp"
+			        style="@android:style/Widget.ProgressBar.Horizontal"
+			        android:layout_alignParentEnd="true"
+			        android:layout_marginEnd="10dp"
+			        android:layout_marginTop="20dp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt1_relax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+			        android:layout_alignBottom="@id/pb_mindControlOpt1_relaxStatus"
+			        android:layout_toStartOf="@id/pb_mindControlOpt1_relaxStatus"
+			        android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/mindCtrlOpt1_relax"
+                    android:textSize="20sp" />
+                
+                <ProgressBar
+                    android:id="@+id/pb_mindControlOpt1_focusStatus"
+			        android:layout_width="300dp"
+			        android:layout_height="50dp"
+			        style="@android:style/Widget.ProgressBar.Horizontal"
+			        android:layout_alignParentEnd="true"
+			        android:layout_marginEnd="10dp"
+			        android:layout_below="@id/pb_mindControlOpt1_relaxStatus"
+			        android:layout_marginTop="20dp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt1_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@id/pb_mindControlOpt1_focusStatus"
+			        android:layout_toStartOf="@id/pb_mindControlOpt1_focusStatus"
+			        android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/mindCtrlOpt1_focus"
+                    android:textSize="20sp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt1_status"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/empty"
+                    android:textSize="48sp" />
+
+                <Button
+                    android:id="@+id/btn_mindControlOpt1_end"
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/mindControl_menu"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+            <!-- End of relative layout for mind control option 1 -->
+            
+            <!-- Start of relative layout for mind control option 2 -->
+            <RelativeLayout
+                android:id="@+id/rl_mindControlOpt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:visibility="invisible" >
+                
+                <ProgressBar
+                    android:id="@+id/pb_mindControlOpt2_relaxStatus"
+			        android:layout_width="300dp"
+			        android:layout_height="50dp"
+			        style="@android:style/Widget.ProgressBar.Horizontal"
+			        android:layout_alignParentEnd="true"
+			        android:layout_marginEnd="10dp"
+			        android:layout_marginTop="20dp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt2_relax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+			        android:layout_alignBottom="@id/pb_mindControlOpt2_relaxStatus"
+			        android:layout_toStartOf="@id/pb_mindControlOpt2_relaxStatus"
+			        android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/mindCtrlOpt1_relax"
+                    android:textSize="20sp" />
+                
+                <ProgressBar
+                    android:id="@+id/pb_mindControlOpt2_focusStatus"
+			        android:layout_width="300dp"
+			        android:layout_height="50dp"
+			        style="@android:style/Widget.ProgressBar.Horizontal"
+			        android:layout_alignParentEnd="true"
+			        android:layout_marginEnd="10dp"
+			        android:layout_below="@id/pb_mindControlOpt2_relaxStatus"
+			        android:layout_marginTop="20dp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt2_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@id/pb_mindControlOpt2_focusStatus"
+			        android:layout_toStartOf="@id/pb_mindControlOpt2_focusStatus"
+			        android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/mindCtrlOpt1_focus"
+                    android:textSize="20sp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt2_status"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/mindCtrlOpt2_inst"
+                    android:textSize="28sp" />
+                
+                <TextView
+                    android:id="@+id/tv_mindControlOpt2_volume"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/pb_mindControlOpt2_focusStatus"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="@string/empty"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_mindControlOpt2_end"
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/mindControl_menu"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+            <!-- End of relative layout for mind control option 2 -->
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
